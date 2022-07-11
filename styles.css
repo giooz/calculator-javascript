@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #8231a8;
+}
+
+.grid-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid-container > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: #111;
+    color: #eee
+}
+
+.grid-container > button:hover{
+    background-color:#4d4d4d;
+}
+
+.grid-container >.operator{
+    background-color: #9900ff
+}
+
+.grid-container >.operator:hover{
+    background-color: #ad7bcf
+}
+
+.grid-container >.span-two{
+    grid-column: span 2;
+}
+
+.grid-container >.output{
+    grid-column: 1 / -1;
+    background-color: #222;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container > .output >.previous-operand{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+
+.grid-container > .output >.current-operand{
+    color: white;
+    font-size: 2.5rem;
+}
